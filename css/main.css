@@ -1,0 +1,28 @@
+
+.center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.close-above {
+  margin-bottom: 0rem;
+}
+
+.close-below {
+  margin-top: -2.2rem;
+}
+
+.cause-image {
+  height: 4em;
+}
+
+.nobr { 
+  white-space: nowrap;
+}
