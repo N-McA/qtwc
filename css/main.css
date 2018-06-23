@@ -26,3 +26,12 @@
 .nobr { 
   white-space: nowrap;
 }
+
+.big-icon {
+  font-size: 5rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
