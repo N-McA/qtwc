@@ -20,7 +20,8 @@
 }
 
 .cause-image {
-  height: 4em;
+  max-height: 4em;
+  max-width: 100%;
 }
 
 .nobr { 
