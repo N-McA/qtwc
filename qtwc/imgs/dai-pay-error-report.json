@@ -1,0 +1,9 @@
+{
+  "$errors": [
+    {
+      "stack": "TypeError: Failed to fetch",
+      "message": "Failed to fetch"
+    }
+  ],
+  "$txHash": "UNSENT_OR_UNKNOWN"
+}
