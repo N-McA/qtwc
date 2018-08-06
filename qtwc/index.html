@@ -158,7 +158,7 @@
     }
 
     .card-content {
-      height: 36rem;
+      height: 10%;
     }
 
     .card-header {
@@ -194,6 +194,14 @@
       filter: blur(0.175vw);
     }
 
+    .navbar > * {
+      background-color: #00000000;
+    }
+
+    .navbar-menu.is-active {
+      background-color: #7898bf;
+    }
+
   </style>
 </head>
 
@@ -203,7 +211,7 @@
 
     <section class="hero is-landing is-large blur-bg">
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar" style="background-color: #00000000;">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
@@ -216,7 +224,7 @@
               </span>
             </div>
             <div id="mainNavbar" class="navbar-menu">
-              <div class="navbar-end" style="background-color: #7696bc;">
+              <div class="navbar-end">
                 <a class="navbar-item">
                   Causes
                 </a>
