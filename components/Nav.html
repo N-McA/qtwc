@@ -1,0 +1,87 @@
+<nav class="navbar" style="background-color: #7696bc;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				Tandem Tour Foundation
+			</a>
+			<span 
+			  class="navbar-burger burger {hideMenu || 'is-active'}" 
+				on:click="set({hideMenu: !hideMenu})">
+				<span style="background:white;"></span>
+				<span style="background:white;"></span>
+				<span style="background:white;"></span>
+			</span>
+		</div>
+		<div id="mainNavbar" class="navbar-menu {hideMenu || 'is-active'}">
+			<div class="navbar-end" on:click="set({hideMenu: true})">
+				<a href="/causes" class="navbar-item">
+					Causes
+				</a>
+				<a href="/teams" class="navbar-item">
+					Teams
+				</a>
+				<a href="/race" class="navbar-item">
+					Race
+				</a>
+				<a href="/faq" class="navbar-item">
+					FAQ
+				</a>
+				<span class="navbar-item navbar-big-button">
+					<a href="/donate" class="button is-info is-inverted is-outlined">
+						<span>Donate Now</span>
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<style>
+
+	span.white-line {
+	}
+
+	nav * {
+		color: #ffffff;
+		background-color: #7696bc;
+	}
+
+	.navbar-item:hover {
+		background: 0x00000000;
+		border-bottom: 1px solid white;
+	}
+	
+	a:hover {
+		background: #7898bf00;
+	}
+
+	.navbar> * {
+		background-color: #7898bf00;
+		border-bottom: 1px solid 0x00000000;
+	}
+
+	.navbar-menu.is-active {
+		background-color: #7898bf;
+	}
+
+	.navbar-item.navbar-big-button:hover {
+		background: #7898bf00;
+		border-bottom: 0px;
+	}
+
+	.navbar-item.navbar-big-button>a:hover {
+		background: #7898bf00;
+		/* box-shadow: 4px 4px 3px black; */
+		border-color: slategrey;
+	}
+</style>
+
+<script>
+
+	export default {
+		data: () => ({
+			hideMenu: true,
+		})
+	}
+
+</script>

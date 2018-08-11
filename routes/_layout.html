@@ -1,0 +1,20 @@
+<Nav segment={child.segment}/>
+
+<main>
+	<svelte:component this={child.component} {...child.props}/>
+</main>
+
+<Footer/>
+
+<style>
+
+</style>
+
+<script>
+	export default {
+		components: {
+			Nav: '../components/Nav.html',
+			Footer: '../components/Footer.html',
+		}
+	};
+</script>

@@ -1,0 +1,53 @@
+<section class="bg-light">
+	<div class="container section">
+		<div class="content has-text-centered">
+			<h1>Frequently Asked Questions</h1>
+		</div>
+
+		<div class="columns is-centered is-multiline">
+			{#each someQuestions(questions, nQuestions) as q}
+				<FAQElement {...q}/>
+			{/each}
+		</div>
+
+		{#if nQuestions}
+			<div class="has-text-centered">
+				<a class='button is-large' href='/faq'>More FAQs</a>
+			</div>
+		{/if}
+
+	</div>
+</section>
+
+<script>
+	export default {
+		helpers: {
+			someQuestions(qs, nqs) {
+				return qs.slice(0, nqs)
+			}
+		},
+		data: () => ({
+			questions: [
+				{
+					q: "What is a quad tandem?",
+					a: "A quad tandem is a bicycle in the traditional sense that it has two wheel, handlebars, gears, and everything else you would expect. The only change is it has four riding positions instead of one, and breaks down a vast amount more. Our quaddies are loving built in Seattle, by Quadriguez himself.",
+				},
+				{
+					q: "How will you manage donations to each charity?",
+					a: "To ensure that...",
+				},
+				{
+					q: "Where can I see your progress and stay up to date?",
+					a: "You can follow us on all the traditional social media platforms - give us a like over on Facebook [LINK] for the big stuff, or a follow on Instagram [LINK] for the play-by-play action. On concluding the race, our long suffering film crew are putting together a short film of our journey.",
+				},
+				{
+					q: "I am the CEO of some huge company, and want to give you a vast amount of money?",
+					a: "Hit us up.",
+				},
+			]
+		}),
+		components: {
+			FAQElement: './FAQElement.html',
+		}
+	}
+</script>

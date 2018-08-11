@@ -1,0 +1,133 @@
+<svelte:head>
+  <title>Causes - Quad Tandem Worldies</title>
+</svelte:head>
+
+<section>
+  <div class="has-text-centered" style="max-width: 700px; margin: auto;">
+    <div class="card" style='margin: 1.25rem; padding:1.25rem;'>
+      <h1 class='is-size-3 has-text-weight-semibold'>Causes</h1>
+      <p class='is-size-6'>Because this is an international event, we've selected a great mental health charity in each of the participating countries. (Your money money goes further when the charity you donate to is registered in your country).</p>
+    </div>
+  </div>
+</section>
+
+{#each charities as c}
+<section>
+  <div class="has-text-centered" style="max-width: 700px; margin: auto;">
+    <div class="card charity-card">
+      <div class="columns is-multiline is-gapless is-mobile is-centered is-vcentered" style="margin:0;">
+        <div class="column is-narrow charity-column">
+          <div class="cause-img-div">
+            <img class="cause-img  {causeClass(c.cause)}" src="{c.causeImage}" alt="{c.cause}">
+          </div>
+        </div>
+        <div class="column is-narrow">
+          <div class="cause-img-div">
+            <img class="cause-img flag  {causeClass(c.cause)}" src="{c.flag}" alt="{c.country}">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class='is-size-6 charity-text'>{c.text}</p>
+      <hr>
+      <div class="columns is-multiline is-mobile is-centered has-text-centered is-vcentered" style="margin:0;">
+        <div class="column is-narrow">
+          <a class="button" href="donate ">Donate to the causes</a>
+        </div>
+        <div class="column is-narrow">
+          <a class="button" href="{c.site}">{c.shortName} on the Web</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/each}
+
+<style>
+
+  .charity-card {
+    margin: 1.25rem; 
+    padding: 0.5rem 1.25rem;
+  }
+
+  .charity-text {
+    white-space: pre-wrap;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  hr {
+    margin: 0.5rem;
+  }
+
+  .cause-img.flag {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .cause-img {
+    max-width: 15rem;
+    max-height: 8rem;
+    padding: 1rem;
+    height: auto;
+    width: 15rem;
+    align-self: center;
+    flex: 0 0 auto;
+  }
+
+  .cause-img.mental_health_research_uk {
+    padding-top: 0rem;
+    padding-right: 0.5rem;
+  }
+
+  .cause-img.to_write_love_on_her_arms {
+    /* padding-bottom: 0rem; */
+  }
+
+  .cause-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .charity-columns {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .donate-button {
+    margin: 1rem;
+    background: #325885;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 400px) {
+    .column.charity-column {
+      padding: 0.35rem;
+    }
+    .charity-card > p {
+      padding: 0rem;
+    }
+    .charity-card {
+      margin: 0.5rem; 
+      padding: 0.5rem 1.25rem;
+    }
+  }
+</style>
+
+<script>
+
+  import { charities } from '../charities'
+
+  export default {
+    helpers: {
+      causeClass(causeName) {
+        return causeName.toLowerCase().replace(/ /g, '_')
+      }
+    },
+    data: () => ({
+      charities,
+    }),
+  }
+</script>

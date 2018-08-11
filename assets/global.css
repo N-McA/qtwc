@@ -1,0 +1,182 @@
+html {
+  background-color: #faf6fb;
+}
+
+body,
+#sapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.hero.is-large .hero-body {
+  padding-bottom: 0;
+  padding-top: 2rem;
+}
+
+.hero figure {
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+}
+
+figure.image {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-light {
+  background-color: #faf6fb;
+}
+
+.media-left {
+  padding-left: 15px;
+}
+
+.media-left .icon {
+  margin-top: 15px;
+}
+
+.media-content {
+  padding-left: 25px;
+}
+
+.media {
+  background-color: #ffffff;
+  padding: 25px;
+}
+
+.section {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content h1 {
+  margin-bottom: 2em;
+}
+
+#stn-download {
+  color: #ffffff;
+  background-image: linear-gradient(
+    to right,
+    #66799a 0%,
+    #7898bf 53%,
+    #7898bf 100%
+  );
+}
+
+.hero.is-landing * {
+  color: #ffffff;
+}
+
+.big-text {
+  font-size: 3rem;
+}
+
+@media (max-width: 420px) {
+  .big-text {
+    font-size: 12vw;
+  }
+}
+
+#stn-download h1 {
+  color: #ffffff;
+}
+
+.button.button-store {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
+  font-size: 14px;
+  font-weight: 500;
+  color: #633991;
+  margin: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  line-height: 1.8;
+  height: auto;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.button.button-store:hover {
+  color: #000000;
+  background-color: #faf6fb;
+}
+
+.button.button-store img {
+  margin-right: 0.4rem;
+  vertical-align: text-bottom;
+}
+
+.vertical-space {
+  margin-bottom: 25vmin;
+}
+
+.cause-img.mhruk {
+  width: 90%;
+  height: 90%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.cause-img.to-write {
+  width: 90%;
+  height: 90%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.hero-button {
+  background-color: #7898bf61;
+}
+
+.card-img {
+  height: 7rem;
+  margin-top: 0.25rem;
+  margin-left: 1rem;
+}
+
+.card-title {
+  margin-left: -0.5rem;
+}
+
+.card-the {
+  font-size: 1rem;
+}
+
+.card-content {
+  height: 100%;
+}
+
+.card-header {
+  display: block;
+}
+
+.card-header > .columns {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.big-icon {
+  padding: 1rem;
+  font-size: 5rem;
+  color: black;
+}
+
+.footer {
+  padding: 2rem 1.5rem 1rem;
+}

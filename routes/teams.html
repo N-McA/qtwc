@@ -1,0 +1,265 @@
+<svelte:head>
+  <title>Teams - Quad Tandem Worldies</title>
+</svelte:head>
+
+<section class='bg-light team-section'>
+
+  <div class="has-text-centered">
+    <img class='flag' src='imgs/union-jack.png' />
+    <h1 class='title big-text'>
+      Great Britain
+    </h1>
+  </div>
+
+  <div class="team-columns columns is-multiline">
+
+    {#each brit as p}
+
+    <div class="column is-half team-column">
+      <div class="card" style="min-height: 100%; padding-top: 0.75rem;">
+        <div class="has-text-centered name-div">
+          <h2 class="is-size-4 has-text-weight-bold">
+            {p.fullName}
+          </h2>
+        </div>
+        <div id="this-bit" class="columns is-mobile is-centered is-vcentered is-multiline">
+          <div class="column is-narrow">
+            <img class='card-img' src='/imgs/bios/{p.imgName}.jpg'>
+          </div>
+          <div class="column is-narrow">
+            <div style="min-width: 5rem;">
+              <ul>
+                <li>Weight:
+                  <span>{p.weight} Kg</span>
+                </li>
+                <li>Age:
+                  <span>{p.age}</span>
+                </li>
+                <li>Position:
+                  <span>{p.position}</span>
+                </li>
+                <li>FTP:
+                  <span>{p.ftp}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="card-content team-card">
+          <div class="content">
+            <p style="white-space: pre-wrap;">
+              {p.text}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/each}
+    
+  </div>
+</section>
+
+<section class='bg-white team-section'>
+
+  <div class="has-text-centered">
+    <img class='flag' src='imgs/canada.png' />
+    <h1 class='title big-text'>
+      Canada
+    </h1>
+  </div>
+
+  <div class="team-columns columns is-multiline">
+
+    {#each canadian as p}
+
+    <div class="column is-half">
+      <div class="card" style="min-height: 100%; padding-top: 0.75rem;">
+        <div class="has-text-centered name-div">
+          <h2 class="is-size-4 has-text-weight-bold">
+            {p.fullName}
+          </h2>
+        </div>
+        <div id="this-bit" class="columns is-mobile is-centered is-vcentered is-multiline">
+          <div class="column is-narrow">
+            <img class='card-img' src='/imgs/bios/{p.imgName}.jpg'>
+          </div>
+          <div class="column is-narrow">
+            <div style="min-width: 5rem;">
+              <ul>
+                <li>Weight:
+                  <span>{p.weight} Kg</span>
+                </li>
+                <li>Age:
+                  <span>{p.age}</span>
+                </li>
+                <li>Position:
+                  <span>{p.position}</span>
+                </li>
+                <li>FTP:
+                  <span>{p.ftp}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="card-content team-card">
+          <div class="content">
+            <p style="white-space: pre-wrap;">
+              {p.text}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/each}
+
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  hr {
+    margin: 0rem;
+  }
+
+  #this-bit {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .name-div {
+    padding: 0.3rem;
+  }
+
+  li>span {
+    font-weight: bold;
+  }
+
+  .flag {
+    width: auto;
+    height: auto;
+    max-width: 20vw;
+    max-height: 4rem;
+  }
+
+  .card-img {
+    border-radius: 0.5rem;
+    margin: 0rem 1rem;
+  }
+
+  .team-columns {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  @media (max-width: 400px) {
+    .column.team-column {
+      padding: 0.35rem;
+    }
+    .card-content.team-card {
+      padding: 1rem;
+    }
+  }
+
+  section.team-section {
+    padding: 2rem 0.25rem;
+  }
+</style>
+
+<script>
+  export default {
+    data: () => ({
+      brit: [
+        {
+          fullName: 'Angus Young',
+          weight: 80,
+          age: 22,
+          ftp: "320 Watts",
+          position: "Captain & Pilot",
+          imgName: 'angus',
+          text: 'Hardcore endurance triathlete and Nordic skier, Angus Young pilots the quad tandem for Team GB. With good results over Ironman distances, he hopes to bring the watts and guide the team to victory. Sadly his severe dyslexia means he is unable to read road signs or tell left from right...'
+        },
+        {
+          fullName: 'Samuel Mallet',
+          weight: 90,
+          age: 22,
+          ftp: "235 Watts",
+          position: "Stoker",
+          imgName: 'mallet',
+          text: "Our beer-drinking, house-building, football-loving, bloke from Little England steps across the pond for the very first time. A triathlete and self proclaimed “low intensity” sportsman, can he overcome his fear of a raised heart rate and put the power down to propel this ridiculous contraption to victory?",
+        },
+        {
+          fullName: 'Will Skirrow',
+          weight: 68,
+          age: 22,
+          ftp: "255 Watts",
+          position: "Rear Gunner",
+          imgName: 'skirrow',
+          text: "A hill climbing specialist and triathlete with a fear of water, Will brings up the rear for Team GB. He possesses a natural ability to break almost anything simply by playing with it, and can only occasionally fix things, leading to a potential ban from touching anything vaguely mechanical. An outspoken advocate for Power to Weight ratios in cycling, will he be able to spin to win? Or will he crack under the pressure of his teammate’s generous baggage?",
+        },
+        {
+          fullName: 'Nat McAleese',
+          weight: 65,
+          age: 22,
+          ftp: "Questionable.",
+          position: "Navigator",
+          imgName: 'nat',
+          text: "Nat brings the technical know-how to a team of easily distracted, quickly bored Brits. Hopefully his guiding influence and local knowledge will keep them on task, and make up for the lack of any tangible sporting experience. Joining us directly from the world famous Burning Man festival in Nevada, will Nat have not only found himself, but also the patience to put up with the other three idiots?"
+        },
+      ],
+      canadian: [
+        {
+          fullName: 'Jeff Belanger',
+          weight: 82,
+          age: 32,
+          ftp: '"Out for a rip" Watts',
+          position: "Captain & Pilot",
+          imgName: 'jeff',
+          text: "This Glorious bearded, whisky sluggin, parrot lovin, crusty old cap has shakin off the last few years of “hard” livin to come back and ride to glory with Team Canada. The famous captain is returning to the helm of Quadriguez for his 3rd round of conquest with hopes he and his brothers will satisfy his insatiable thirst for quad tandem glory. "
+        },
+        {
+          fullName: '"Hambone" Simon',
+          weight: 91,
+          age: 30,
+          ftp: "325 Watts",
+          position: '"Assistant" Captain',
+          imgName: 'hambone',
+          text: "An outdoor adventure enthusiast from Vancouver BC.  Good vibes, burritos and strumming guitar are just a few things that keep hams chain greased.  By far the most talkative team member and most likely to wind up on cover of GQ.  Hambone has over 3000 km of Quad tandem experience and is frothing to get back on the saddle!",
+        },
+        {
+          fullName: 'Ben "Griller" Miller',
+          weight: 81,
+          age: 32,
+          ftp: "Over 9000",
+          position: '"Retired"',
+          imgName: 'ben',
+          text: "The slim jim of the group. Ben desires to get back on the basketball court and live out his true dream, however he has settled for getting back on the quad. An original team members of the quad tandem experience, he’s seen the highs and lows of riding one one bike with 3 others. Ben is the teams sports psychologist and early morning wake up team mediation leader.",
+        },
+        {
+          fullName: 'Ryan Hickey',
+          weight: 81,
+          age: 31,
+          ftp: "Questionable.",
+          position: "Nutrition Coach",
+          imgName: 'ryan',
+          text: "Though he may look a bit intimidating at first glance, don’t be fooled...this book loving, kitchen dwelling, health and wellness guru is nothing but laughs and good times. Weather he is working on his swing, reading up on the latest health trends, or going to bed by 4:30 pm. Ryan is always striving for self improvement. When he’s not rolling quad tandem he be in the kitchen prepping nutrient dense meals for the boys ! Ryan’s excited to get back on the coast again with the mates."
+        },
+      ],
+    }),
+  }
+</script>

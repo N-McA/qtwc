@@ -1,0 +1,110 @@
+<svelte:head>
+  <title>Donate - Quad Tandem Worldies</title>
+</svelte:head>
+
+<section class='bg-light'>
+  <div class="has-text-centered" style="max-width: 600px; margin: auto;">
+    <div class="card" style='margin: 1.25rem; padding:1.25rem;'>
+      <h1 class='is-size-3 has-text-weight-semibold'>Donate</h1>
+      <p class='is-size-6 has-text-weight-semibold'>All online donations go directly to the end charity.</p>
+      <p class='is-size-6'>Your money money goes further when the charity you donate to is registered in your country.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light" style="min-height: 100%;">
+  <div class="charity-columns columns is-centered">
+
+    {#each charities as c, i}
+
+    <div class="column {(i % 2 == 1) ? 'bg-white' : 'bg-light'}">
+      <div class="has-text-centered">
+        <h1 class='is-size-4'>{c.country}</h1>
+      </div>
+      <img class='flag' src="{c.flag}" />
+      <div class="card">
+        <div class="cause-img-div">
+          <img class="cause-img  {causeClass(c.cause)}" src="{c.causeImage}" alt="{c.cause}">
+        </div>
+        <hr/>
+        <div class="has-text-centered">
+          <a href="{c.donateLink}" class='button donate-button'>Click to Donate Now!</a>
+        </div>
+      </div>
+    </div>
+
+    {/each}
+
+  </div>
+
+</section>
+
+<style>
+  hr {
+    margin: 0;
+  }
+
+  .flag {
+    height: 3rem;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cause-img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1rem;
+    height: auto;
+    width: auto;
+    align-self: center;
+    flex: 0 0 auto;
+  }
+
+  .cause-img.mental_health_research_uk {
+    padding-top: 0rem;
+    padding-right: 0.5rem;
+  }
+
+  .cause-img.to_write_love_on_her_arms {
+    /* padding-bottom: 0rem; */
+  }
+
+  .cause-img-div {
+    display: flex;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .charity-columns {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .donate-button {
+    margin: 1rem;
+    background: #325885;
+    color: white;
+    font-size: 1.25rem;
+  }
+</style>
+
+<script>
+
+  import { charities } from '../charities'
+
+  export default {
+    helpers: {
+      causeClass(causeName) {
+        return causeName.toLowerCase().replace(/ /g, '_')
+      }
+    },
+    data: () => ({
+      charities,
+    }),
+  }
+</script>

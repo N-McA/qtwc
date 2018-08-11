@@ -1,0 +1,23 @@
+<svelte:head>
+	<title>Quad Tandem Worldies</title>
+</svelte:head>
+
+
+<Hero/>
+
+<HeroCards/>
+
+<HowToHelp/>
+
+<FAQ nQuestions=3/>
+
+<script>
+	export default {
+		components: {
+			Hero: '../components/Hero.html',
+			HeroCards: '../components/HeroCards.html',
+			HowToHelp: '../components/HowToHelp.html',
+			FAQ: '../components/FAQ.html',
+		}
+	};
+</script>
