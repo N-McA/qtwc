@@ -126,18 +126,18 @@ figure.image {
   margin-bottom: 25vmin;
 }
 
-.cause-img.mhruk {
-  width: 90%;
-  height: 90%;
-  max-width: 90%;
-  max-height: 90%;
+.cause-img {
+  width: 8rem;
+  height: auto;
+  max-height: 4rem;
 }
 
-.cause-img.to-write {
-  width: 90%;
-  height: 90%;
-  max-width: 90%;
-  max-height: 90%;
+@media(min-width: 450px) {
+  .cause-img {
+    width: 16rem;
+    height: auto;
+    max-height: 6rem;
+  }
 }
 
 .hero-button {

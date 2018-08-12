@@ -16,17 +16,12 @@
 					</h2>
 				</div>
 			</div>
-			<div class="columns is-mobile is-centered is-vcentered is-gapless" style="margin-bottom: 1rem;">
-				<div class="column is-half">
-					<a class="is-pulled-right is-clearfix" href="http://www.mentalhealthresearchuk.org.uk/">
-						<img class="cause-img mhruk" src="imgs/mental_health_research.png" alt="Mental Health Research UK">
-					</a>
-				</div>
-				<div class="column is-half">
-					<a class="is-pulled-left is-clearfix" style="margin-left: 5rem;" href="https://twloha.com/">
-						<img class="cause-img to-write" src="imgs/to_write_love.svg" alt="To Write Love on Her Arms">
-					</a>
-				</div>
+			<div class="columns is-centered is-vcentered is-gapless is-multiline is-mobile" style="margin-bottom: 1rem;">
+				{#each charities as c}
+					<div class="column is-narrow">
+						<a class='cause-img' href="{c.site}"><img class='cause-img' alt="{c.cause}" src="{c.causeImage}"/></a>
+					</div>
+				{/each}
 			</div>
 		</div>
 		<div class="columns is-centered is-mobile">
@@ -64,7 +59,11 @@
 </style>
 
 <script>
+	import { charities } from '../charities';
 	export default {
+		data: () => ({
+			charities,
+		}),
 		components: {
 			Nav: '../components/Nav.html',
 		}

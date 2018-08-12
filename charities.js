@@ -22,17 +22,6 @@ They also work hard to combat the stigma surrounding male mental health issues a
 
 export const charities = [
   {
-    country: "USA",
-    flag: "imgs/usa.png",
-    cause: "To Write Love on Her Arms",
-    causeImage: "imgs/to_write_love.svg",
-    donateLink:
-      "https://www.justgiving.com/fundraising/quad-tandem-worldies/donate",
-    shortName: 'TWLoHA',
-    text: twlohaText,
-    site: "https://twloha.com/",
-  },
-  {
     country: "Great Britain",
     flag: "imgs/union-jack.png",
     cause: "Mental Health Research UK",
@@ -42,6 +31,17 @@ export const charities = [
     text: mhrukText,
     shortName: 'MHRUK',
     site: 'http://www.mentalhealthresearchuk.org.uk/',
+  },
+  {
+    country: "USA",
+    flag: "imgs/usa.png",
+    cause: "To Write Love on Her Arms",
+    causeImage: "imgs/to_write_love.svg",
+    donateLink:
+      "https://www.justgiving.com/fundraising/quad-tandem-worldies/donate",
+    shortName: 'TWLoHA',
+    text: twlohaText,
+    site: "https://twloha.com/",
   },
   {
     country: "Canada",
