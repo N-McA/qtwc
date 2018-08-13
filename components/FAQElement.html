@@ -1,4 +1,13 @@
 <div class="column is-4">
 	<div class="title is-4">{q}</div>
 	<p>{a}</p>
+	{#if img}
+		<img src="{img}"/>
+	{/if}
 </div>
+
+<style>
+	img {
+		padding: 1.5rem;
+	}
+</style>
