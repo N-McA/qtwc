@@ -23,7 +23,7 @@
         </div>
         <div class="column is-narrow">
           <div class="cause-img-div">
-            <img class="cause-img flag  {causeClass(c.cause)}" src="{c.flag}" alt="{c.country}">
+            <img class="flag  {causeClass(c.cause)}" src="{c.flag}" alt="{c.country}">
           </div>
         </div>
       </div>
@@ -60,9 +60,14 @@
     margin: 0.5rem;
   }
 
-  .cause-img.flag {
+  .flag {
     max-width: 60%;
     max-height: 60%;
+    padding: 1rem;
+    height: auto;
+    width: 15rem;
+    align-self: center;
+    flex: 0 0 auto;
   }
 
   .cause-img {
