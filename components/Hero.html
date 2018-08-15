@@ -6,10 +6,13 @@
 		<div class="container has-text-centered">
 
 			<div class="columns is-centered">
-				<div class="column is-8">
+				<div class="column is-8" bind:clientWidth>
 					<p>Introducing the first ever:</p>
-					<h1 class="title big-text">
-						Quad Tandem World Championships
+					<h1 class='big-1'>
+						Quad Tandem
+					</h1>
+					<h1 class='big-2'>
+						World Championships
 					</h1>
 					<h2 class="subtitle is-4">
 						In support of:
@@ -35,6 +38,10 @@
 
 <style>
 
+	.hero-button {
+		background-color: #899ab3;
+	}
+
 	#hero {
 		background-color: #7696bc;
 		background-image: url('imgs/padded-arm-up.jpg');
@@ -56,6 +63,25 @@
 		bottom: calc(75.5vw + -0.5rem);
 		filter: blur(0.175vw);
 	}
+
+	.big-1 {
+		font-size: 8.5vw;
+	}
+
+	.big-2 {
+		font-size: 8.5vw;
+	}
+
+	@media(min-width: 630px) {
+		.big-1 {
+			font-size: 4rem;
+		}
+
+		.big-2 {
+			font-size: 3.5rem;
+		}
+	}
+
 </style>
 
 <script>
