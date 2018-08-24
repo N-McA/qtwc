@@ -16,17 +16,6 @@ Out of a base in Florida, they work hard to promote help seeking and distribute 
 
 export const charities = [
   {
-    country: "Great Britain",
-    flag: "imgs/union-jack.png",
-    cause: "Mental Health Research UK",
-    causeImage: "imgs/mental_health_research.png",
-    donateLink:
-      "https://www.justgiving.com/fundraising/quad-tandem-worldies-mhruk/donate",
-    text: mhrukText,
-    shortName: 'MHRUK',
-    site: 'http://www.mentalhealthresearchuk.org.uk/',
-  },
-  {
     country: "USA & Canada",
     flag: "imgs/usa-canada.png",
     cause: "To Write Love on Her Arms",
@@ -36,5 +25,16 @@ export const charities = [
     shortName: 'TWLoHA',
     text: twlohaText,
     site: "https://twloha.com/",
+  },
+  {
+    country: "Great Britain",
+    flag: "imgs/union-jack.png",
+    cause: "Mental Health Research UK",
+    causeImage: "imgs/mental_health_research.png",
+    donateLink:
+      "https://www.justgiving.com/fundraising/quad-tandem-worldies-mhruk/donate",
+    text: mhrukText,
+    shortName: 'MHRUK',
+    site: 'http://www.mentalhealthresearchuk.org.uk/',
   },
 ];
