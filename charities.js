@@ -14,12 +14,6 @@ To Write Love on Her Arms (TWLOHA) is an organisation that aims to present hope 
 Out of a base in Florida, they work hard to promote help seeking and distribute funds to treatment and recovery centers, as well as crisis hotlines. So far, they've given away more than two million dollars.
 `
 
-const headsUpText = `\
-Heads Up Guys is a charity partnership with University of British Columbia. They provide online materials that directly connect those in need to practical immediate advice, as well as local support services.
-
-They also work hard to combat the stigma surrounding male mental health issues and to promote help-seeking behaviour amongst men, by producing materials that directly target common misconceptions about depression and anxiety.
-`
-
 export const charities = [
   {
     country: "Great Britain",
@@ -33,8 +27,8 @@ export const charities = [
     site: 'http://www.mentalhealthresearchuk.org.uk/',
   },
   {
-    country: "USA",
-    flag: "imgs/usa.png",
+    country: "USA & Canada",
+    flag: "imgs/usa-canada.png",
     cause: "To Write Love on Her Arms",
     causeImage: "imgs/to_write_love.svg",
     donateLink:
@@ -42,14 +36,5 @@ export const charities = [
     shortName: 'TWLoHA',
     text: twlohaText,
     site: "https://twloha.com/",
-  },
-  {
-    country: "Canada",
-    flag: "imgs/canada.png",
-    cause: "Heads Up Guys",
-    causeImage: "imgs/heads_up_guys.svg",
-    shortName: 'Heads Up',
-    text: headsUpText,
-    site: "https://headsupguys.org/for-supporters/",
   },
 ];
