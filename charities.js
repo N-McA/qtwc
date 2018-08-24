@@ -32,7 +32,7 @@ export const charities = [
     cause: "To Write Love on Her Arms",
     causeImage: "imgs/to_write_love.svg",
     donateLink:
-      "https://www.justgiving.com/fundraising/quad-tandem-worldies/donate",
+      "https://give.twloha.com/give/f1575995/#!/donation/checkout",
     shortName: 'TWLoHA',
     text: twlohaText,
     site: "https://twloha.com/",
