@@ -1,0 +1,105 @@
+
+<svelte:head>
+  <title>Live Location - Quad Tandem Worldies</title>
+</svelte:head>
+
+<div class="has-text-centered">
+  <h1 class='is-size-3 has-text-weight-semibold'>Live Locations</h1>
+</div>
+
+<section>
+  <iframe src="locations-iframe.html"></iframe> 
+</section>
+
+<style>
+
+  iframe {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: -0.5rem;
+  }
+
+  .card {
+    margin: 1.25rem;
+    padding:1.25rem;
+  }
+
+  .circle {
+    border-radius: 50%;
+    width: 10rem;
+  }
+
+  .columns.is-gapless {
+    margin-bottom: 0;
+  }
+
+  .charity-card {
+    margin: 1.25rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .charity-text {
+    white-space: pre-wrap;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  hr {
+    margin: 0.5rem;
+  }
+
+  .cause-img.flag {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .cause-img {
+    max-width: 15rem;
+    max-height: 8rem;
+    padding: 1rem;
+    height: auto;
+    width: 15rem;
+    align-self: center;
+    flex: 0 0 auto;
+  }
+
+  .cause-img.mental_health_research_uk {
+    padding-top: 0rem;
+    padding-right: 0.5rem;
+  }
+
+  .cause-img.to_write_love_on_her_arms {
+    /* padding-bottom: 0rem; */
+  }
+
+  .cause-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .charity-columns {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .donate-button {
+    margin: 1rem;
+    background: #325885;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 400px) {
+    .column.charity-column {
+      padding: 0.35rem;
+    }
+    .charity-card>p {
+      padding: 0rem;
+    }
+    .charity-card {
+      margin: 0.5rem;
+      padding: 0.5rem 1.25rem;
+    }
+  }
+</style>
