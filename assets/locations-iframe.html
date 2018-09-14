@@ -9,6 +9,22 @@
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
+        .marker-uk {
+          background-image: url('imgs/union-jack-50x-icon.png');
+          background-size: cover;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-position: center;
+        }
+        .marker-ca {
+          background-image: url('imgs/canada-50x-icon.png');
+          background-size: cover;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-position: center;
+        }
     </style>
 </head>
 <body>
@@ -23,11 +39,21 @@ var map = new mapboxgl.Map({
     zoom: 5 // starting zoom
 });
 
+const BRITS = ['Angus', 'Nat', 'Will', 'Sam']
+const CADS = ['Ryan', 'Hamilton', 'Ben', 'Jeff']
+
 fetch('https://location.tandemtourfoundation.org/json/locations')
   .then(r => r.json())
   .then(data => {
     data.forEach(d => {
-    var marker = new mapboxgl.Marker()
+    let el = document.createElement('div');
+    if (BRITS.indexOf(d.name) >= 0) {
+      el.className = 'marker-uk';
+    }
+    if (CADS.indexOf(d.name) >= 0) {
+      el.className = 'marker-ca';
+    }
+    let marker = new mapboxgl.Marker(el)
       .setLngLat([d.lon, d.lat])
       .addTo(map);
     })
