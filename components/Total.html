@@ -1,0 +1,71 @@
+<section class="bg-light">
+	<div id="hero-card-section" class="container section">
+		<div class="content has-text-centered">
+			<h1>{numberWithCommas(raised)} USD Raised - {noDecimals(percent_to_goal)}% of the way there.</h1>
+      <progress class="progress is-info" value="{percent_to_goal}" max="100">45%</progress>
+      <a href='/donate' class='button is-link'>Click and help us reach our goal</a>
+		</div>
+	</div>
+</section>
+
+<script>
+  const TWLOHA_API = 'https://location.tandemtourfoundation.org/json/twloha-overview'
+  export default {
+    data: () => ({
+      raised: 0,
+      percent_to_goal: 0,
+    }),
+    oncreate() {
+      console.log('here')
+      fetch(TWLOHA_API)
+        .then(r => r.json())
+        .then(d => {
+          this.set({
+            percent_to_goal: d.metrics.percent_to_goal,
+            raised: d.metrics.donations_amount,
+          })
+          console.log(d)
+        })
+    },
+    helpers: {
+      noDecimals(x) {
+        if (!x) return x;
+        return x.toFixed(0);
+      },
+      numberWithCommas(x) {
+        if (!x) return x;
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts[0];
+      }
+    }
+  }
+</script>
+
+<style>
+
+  progress {
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 500px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .content {
+    margin: 2rem 1rem;
+  }
+
+  #hero-card-section {
+    width: 100%;
+    padding: 0.25rem;
+  }
+
+  .columns {
+    width: 100%;
+    margin: auto;
+  }
+
+</style>
