@@ -4,6 +4,9 @@
       <div class="column is-narrow">
         <div class="content">
           <h1 class='width-set'>We're racing two four-man bikes 1024Km to raise money and awareness for two mental health charities.</h1>
+          <h1 class='width-set'>Check out our daily updates on <a href="https://www.youtube.com/playlist?list=PLO8kAe8d56DHvePe1CzBMXmvgjC_Hqkf6">YouTube</a>.</h1>
+          <h1 class='width-set'>Follow us on <a href="https://www.facebook.com/thetandemtour">Facebook</a> or <a href="https://www.instagram.com/tandemtourfoundation/">Instagram</a>.</h1>
+          <h1 class='width-set'><a href="{donationTarget}">Donate</a> to directly support TWLoHA and MHRUK!</h1>
         </div>
       </div>
     </div>
@@ -82,11 +85,20 @@ From the start line in Portland, Oregon all the way to San Francisco, California
 
 Check out the race page to find out more.
 `
+  import { getUrlParam, getDonationTarget } from '../utils';
 
   export default {
     components: {
       HeroCard: './HeroCard.html'
     },
+    oncreate() {
+      this.set({focus: getUrlParam('focus')})
+    },
+    computed: {
+			donationTarget: ({focus}) => {
+				return getDonationTarget(focus)
+			}
+		},
     data: () => ({
       cards: [
         {

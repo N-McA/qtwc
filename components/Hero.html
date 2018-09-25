@@ -7,7 +7,6 @@
 
 			<div class="columns is-centered">
 				<div class="column is-8" bind:clientWidth>
-					<p>Introducing the first ever:</p>
 					<h1 class='big-1 has-text-weight-bold'>
 						Quad Tandem
 					</h1>
@@ -29,7 +28,7 @@
 		</div>
 		<div class="columns is-centered is-mobile">
 			<div class="column is-narrow">
-				<a class='button is-large hero-button' href='donate'>Donate Now</a>
+				<a class='button is-large hero-button' href='{donationTarget}'>Donate Now</a>
 			</div>
 		</div>
 		<div class="vertical-space"></div>
@@ -85,13 +84,26 @@
 </style>
 
 <script>
+
+
+
+
 	import { charities } from '../charities';
+	import { getUrlParam, getDonationTarget } from '../utils';
 	export default {
+		oncreate() {
+			this.set({focus: getUrlParam('focus')})
+		},
 		data: () => ({
 			charities,
 		}),
 		components: {
 			Nav: '../components/Nav.html',
-		}
+		},
+		computed: {
+			donationTarget: ({focus}) => {
+				return getDonationTarget(focus)
+			}
+		},
 	}
 </script>
