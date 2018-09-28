@@ -1,0 +1,39 @@
+
+<section bind:clientWidth>
+  <div class="has-text-centered" style="max-width: 700px; margin: auto;">
+    <div class="card">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbicyclingmag%2Fvideos%2F247513515960683%2F&show_text=0&width={getWidth(clientWidth)}" width="{getWidth(clientWidth)}" height="{getWidth(clientWidth)}" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+    </div>
+  </div>
+</section>
+
+<div style="margin-top: -2rem;">
+  <Total />
+</div>
+
+<style>
+  .card {
+    padding: 1rem;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin: 1.5rem;
+  }
+</style>
+
+<script>
+  export default {
+    components: {
+      Total:  '../components/Total.html',
+    },
+    helpers: {
+      getWidth(clientWidth) {
+        return Math.min(Math.round(clientWidth*0.9), 375)
+      }
+    }
+  }
+</script>
